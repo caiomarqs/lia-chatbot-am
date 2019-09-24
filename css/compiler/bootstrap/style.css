@@ -127,6 +127,7 @@
   background-color: #2f34365b;
   outline: none;
   border: 0px solid #2af8d8;
+  box-shadow: none;
 }
 
 .custom-control {

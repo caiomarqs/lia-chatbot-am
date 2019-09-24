@@ -66,5 +66,99 @@ rSenhaInputform.addEventListener('blur', function () {
 
 
 
+let btnCadastrar = document.getElementById('btn-cadastrar');
+btnCadastrar.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    let erros = [];
+
+    let validacaoNome = () => {
+        if (inputValidation(nomeInput, nomeRegex) == true) {
+            return true;
+        }
+        else {
+            erros.push('O nome está invalido');
+        }
+    }
+    let validacaoSobrenome = () => {
+        if (inputValidation(sobrenomeInput, sobrenomeRegex) == true) {
+            return true;
+        }
+        else {
+            erros.push('O Sobrenome está invalido');
+        }
+    }
+    let validacaoEmail = () => {
+        if (inputValidation(emailInputForm, emailRegex) == true) {
+            return true
+        } else {
+            erros.push('O email está invalido');
+        }
+
+    }
+
+    let validacaoRM = () => {
+        if (inputValidation(rmInput, rmRegex) == true) {
+            return true
+        } else {
+            erros.push('O RM está invalido');
+        }
+    }
+
+    let validacaoSenhas = () => {
+        let senha1 = inputValidation(senhaInputForm, senhaRegex);
+        let senha2 = inputValidation(rSenhaInputform, senhaRegex);
+
+
+
+        if (senha1 == true) {
+            if (senha2 == true) {
+                if (senhaInputForm === rSenhaInputform) {
+                    return true
+                }
+                else {
+                    erros.push('As senhas não condizem');
+                }
+            }
+            else {
+                erros.push('A senha digitada novamente esta invalida');
+            }
+        }
+        else {
+            erros.push('A senha esta invalida');
+        }
+    }
+
+
+    let retrun1;
+    let retrun2;
+    let retrun3;
+    let retrun4;
+    let retrun5;
+
+
+
+    function chamaTodas() {
+        retrun1 = validacaoNome();
+        retrun2 = validacaoSobrenome();
+        retrun3 = validacaoRM();
+        retrun4 = validacaoEmail();
+        retrun5 = validacaoSenhas();
+    }
+
+    if (retrun1 == true && retrun2 == true && retrun3 == true && retrun4 == true && retrun5 == true) {
+        alert('Cadastro feito com sucesso');
+    }
+    else {
+        chamaTodas()
+        for (let index = 0; index < erros.length; index++) {
+            alert(erros[index].toString());
+        }
+    }
+});
+
+
+
+
 
 

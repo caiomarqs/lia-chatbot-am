@@ -113,7 +113,7 @@ btnCadastrar.addEventListener('click', function (e) {
 
         if (senha1 == true) {
             if (senha2 == true) {
-                if (senhaInputForm === rSenhaInputform) {
+                if (senhaInputForm.value === rSenhaInputform.value) {
                     return true
                 }
                 else {
@@ -146,11 +146,12 @@ btnCadastrar.addEventListener('click', function (e) {
         retrun5 = validacaoSenhas();
     }
 
+    chamaTodas();
+
     if (retrun1 == true && retrun2 == true && retrun3 == true && retrun4 == true && retrun5 == true) {
         alert('Cadastro feito com sucesso');
     }
     else {
-        chamaTodas()
         for (let index = 0; index < erros.length; index++) {
             alert(erros[index].toString());
         }

@@ -35,9 +35,9 @@ function inserirMsg() {
 
         let txtUsr = `<p>${inputusuario.value}</p>`;
         let dataHora = `<h6 class="data_hora">${sysTime.getHours+""}</h6>`;
-        let boxMsg = `<div class="msg_enviada d-flex flex-column" hidden><h5 class="nome_enviado">Nome</h5><div class="box_msg_enviada">${txtUsr}</div></div>`;
-        let boxMsgElement = new DOMParser().parseFromString(boxMsg, "text/html");
-        coproMsg.appendChild(boxMsgElement.documentElement);
+        let boxMsg = `<div id="msg-box" class="msg_enviada d-flex flex-column" hidden><h5 class="nome_enviado">Nome</h5><div class="box_msg_enviada">${txtUsr}</div></div>`;
+        let boxMsgElement = new DOMParser().parseFromString(boxMsg, "text/html").getElementById('msg-box');
+        coproMsg.appendChild(boxMsgElement);
 
         inputusuario.value = "";
     }

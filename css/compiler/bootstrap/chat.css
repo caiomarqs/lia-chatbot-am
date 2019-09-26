@@ -251,7 +251,7 @@
 .conversa {
   height: calc(100% - 4.5em);
   background-color: #15181956;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .barra {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>LiaChatbot - Assistente Virtual</title>
 
     <!-- bootstrap core -->
     <link rel="stylesheet" href="css/compiler/bootstrap/bootstrap.css">
@@ -89,16 +89,36 @@
         <section id="conteudo">
             <!-- div do chat bot -->
             <div id="chat" class="vh-100 chat">
-                <div class="row">
-                    <div class="col-12 conversa">
-
+                <div class="row d-block">
+                    <div class="col-12 conversa d-flex">
+                        <div class="msg_recbida d-flex flex-column">
+                            <h5 class="nome_recebido">lia</h5>
+                            <div class="box_msg_recebida">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam maxime ducimus
+                                    suscipit dolores magni iusto est voluptatum
+                                </p>
+                            </div>
+                            <h6 class="data_hora">12:20 | 25/09/2019</h6>
+                        </div>
+                        <div class="msg_enviada d-flex flex-column">
+                            <h5 class="nome_enviado">Nome</h5>
+                            <div class="box_msg_enviada">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam maxime ducimus
+                                    suscipit dolores magni iusto est voluptatum
+                                </p>
+                            </div>
+                            <h6 class="data_hora">12:20 | 25/09/2019</h6>
+                        </div>
                     </div>
-
                     <div class="col-12 barra d-flex">
                         <input type="text" class="form-control flex-grow-1" id="input-user"
                             placeholder="Faça sua pergunta">
-                        <button id="btn-mic"class="btn btn-primary"><i id="mic" class="fas fa-microphone-alt"></i></button>
-                        <button id="btn-msg" class="btn btn-primary"><i id="msg" class="fas fa-paper-plane"></i></button>
+                        <button id="btn-mic" class="btn btn-primary"><i id="mic"
+                                class="fas fa-microphone-alt"></i></button>
+                        <button id="btn-msg" class="btn btn-primary"><i id="msg"
+                                class="fas fa-paper-plane"></i></button>
                     </div>
                 </div>
             </div>
@@ -128,5 +148,6 @@
 <!-- import do js de animações proprias -->
 <!-- isso está bugando o menu -->
 <script src="js/index.js"></script>
+<script src="js/chat.js"></script>
 
 </html>

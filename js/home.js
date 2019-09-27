@@ -103,5 +103,5 @@ btnEnviar.addEventListener('click', function (e) {
 
 textareaContato.addEventListener('click', function(){
     textareaContato.select();
-    textareaContato.classList.add('color-textarea')
+    // textareaContato.classList.add('color-textarea')
 });

@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
     <!-- Navgation -->
     <header>
         <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -49,10 +49,10 @@
 
                     <!-- itens ao meio-->
                     <ul class="navbar-nav mx-auto order-1">
-                        <li class="nav-item"><a class="nav-link" href="">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Como Funciona</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Quem Pode Usar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#como">Como Funciona</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#quem">Quem Pode Usar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                     </ul>
                     <!-- itens ao meio-->
 
@@ -106,7 +106,8 @@
                                                     mim</label>
                                             </div>
                                         </div>
-                                        <button type="submit" id="btn-entrar" class="btn btn-primary container">Entrar</button>
+                                        <button type="submit" id="btn-entrar"
+                                            class="btn btn-primary container">Entrar</button>
                                     </form>
                                 </div>
                                 <!-- <div class="dropdown-divider"></div> -->
@@ -170,44 +171,47 @@
 
         <!-- divisao em sections -->
         <!-- Section 1 -- Sobre -->
-        <section id="sobre">
-            <!-- Parte1 - Apresentação -->
-            <div id="parte1" class="vh-100">
-                <div id="texto-apresentaçao" class="position-relative">
-                    <h1>Oi, eu sou a Lia!</h1>
-                    <p>Para analisar com êxito as métricas mencionadas, você precisará utilizar uma plataforma de
-                        análise de chatbot. <a href="">Saiba mais</a>
-                    </p>
-                </div>
-                <div id="fundo-apresentacao" class="row position-relative d-none d-lg-flex">
-                    <div id="elementoVazio" class="col-8"></div>
-                    <div id="animacao" class="col-4">Vai vir uma animação</div>
-                </div>
 
-                <div id="fundo-apresentacao" class="row position-relative  d-lg-none">
-                    <div id="animacao" class="col">Vai vir uma animação</div>
-                </div>
-
+        <section id="sobre" class="vh-100">
+            <div id="texto-apresentaçao" class="position-relative">
+                <h1>Oi, eu sou a Lia!</h1>
+                <p>Para analisar com êxito as métricas mencionadas, você precisará utilizar uma plataforma de
+                    análise de chatbot. <a href="">Saiba mais</a>
+                </p>
             </div>
-            <!-- Parte1 - Apresentação -->
-
-            <!-- Parte2 - Informações adicionais -->
-            <div id="parte2" class="vh-100">
-                <p>Parte2</p>
+            <div id="fundo-apresentacao" class="row position-relative d-none d-lg-flex">
+                <div id="elementoVazio" class="col-8"></div>
+                <div id="animacao" class="col-4">
+                </div>
             </div>
-            <!-- Parte2 - Informações adicionais -->
 
-            <!-- quem pode usar -->
-            <div id="parte3" class="vh-100">
-                <p>Parte3</p>
+            <div id="fundo-apresentacao" class="row position-relative  d-lg-none">
+                <div id="animacao" class="col"></div>
             </div>
-            <!-- quem pode usar -->
         </section>
-        <!-- Section 1 -- Sobre -->
+        <section id="como" class="vh-100">
+            <p>Parte2</p>
+        </section>
+        <section id="quem" class="vh-100">
+            <p>Parte3</p>
+        </section>
+        <section id="contato" class="vh-100">
+            <div class="row">
+                <div class="col-12 col-lg-4 texto">
+                    <h1>Entre em contato conosco.</h1>
+                    <p>Se interresou pelo o projeto? Mande uma menssagem para nós, adorariamos saber o que tem para dizer.</p>
+                </div>
+                <div class="col-12 col-lg-8 formulario">
+                    <div class="form-group">
+                        <input type="text" class="form-control" maxlength="20" id="nome" placeholder="Nome">
+                        <input type="text" class="form-control" maxlength="150" id="assunto" placeholder="Assunto">
+                        <input type="email" class="form-control" maxlength="60" id="email" placeholder="Email">
+                        <textarea  id="textarea"rows="8">Escreva sua menssagem.</textarea>
+                        <button type="submit" class="btn btn-primary" id="btn-enviar">Enviar</button>
+                    </div>
 
-
-
-        <!-- divisao em sections -->
+                </div>
+        </section>
     </main>
     <!-- Corpo do Site -->
 
@@ -235,5 +239,6 @@
 <!-- import do js proprios -->
 <script src="js/index.js"></script>
 <script src="js/modais.js"></script>
+<script src="js/home.js"></script>
 
 </html>

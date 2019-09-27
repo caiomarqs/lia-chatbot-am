@@ -1,5 +1,5 @@
 // Controlando sombra do menu 
-let fun = function() {
+let navOnscroll = function() {
     var nav = $('#navbar');
     $(window).scroll(function () {
         if ($(this).scrollTop() > 0) {
@@ -9,5 +9,6 @@ let fun = function() {
         }
     });
 };
-fun();
+navOnscroll();
+
 

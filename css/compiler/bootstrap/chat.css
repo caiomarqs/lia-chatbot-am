@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  background-color: #07cfb0;
+}
+
 /* --barra de scroll-- */
 ::-webkit-scrollbar-track {
   background-color: #d3d3d3;
@@ -54,7 +62,14 @@
 
 /* -animacao menu- */
 #navbar {
+  user-select: none;
   transition: 0.7s cubic-bezier(0.04, 0.67, 0.25, 1);
+}
+
+/*scroll spy ativação*/
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+  transition: 0.3s;
+  color: #2af8d8 !important;
 }
 
 /* -menu ativo- */
@@ -159,8 +174,12 @@
   border-color: #2af8d8;
 }
 
+body {
+  position: relative;
+}
+
 /* --sobre---apresentacao- */
-#parte1 {
+#sobre {
   width: 100%;
   background-image: url("../../../images/bg1.png"), linear-gradient(180deg, #151819, #1d1e1f);
 }
@@ -204,7 +223,7 @@
 /* -posicionamento da animação*/
 #fundo-apresentacao {
   width: 100%;
-  height: 200px;
+  height: 25em;
   z-index: 900;
   top: 20%;
   transform: translateY(-20%);
@@ -227,16 +246,49 @@
 }
 
 /*--como funciona-- */
-#parte2 {
+#como {
   background-image: url("../../../images/bg2.png"), linear-gradient(180deg, #1d1e1f, #212324);
 }
 
 /* --quem pode usar-- */
-#parte3 {
+#quem {
   background-image: url("../../../images/bg3.png"), linear-gradient(180deg, #212324, #151819);
 }
 
+/* --contato-- */
+#contato {
+  background-image: url("../../../images/bg1.png"), linear-gradient(180deg, #151819, #212324);
+  padding: 10em 8em;
+}
+
+/* -caixa de contato- */
+#contato > .row {
+  background-color: #171a1ac4;
+  padding: 3em 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #8c8d8e26;
+  border-radius: 0.3em;
+  color: #eeeeee;
+}
+
+#contato > .row textarea {
+  color: #8c8d8e;
+  background-color: #2f34365b;
+  border: 0px solid #07cfb0;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+}
+
+#contato > .row > #nome, #sobrenome, #email, textarea {
+  margin: 0 0 3em 0;
+}
+
 /* --Conteudo do chat-- */
+.fake-nav {
+  height: 57.33px;
+}
+
 #chat {
   background-image: url("../../../images/bg1.png"), linear-gradient(180deg, #151819, #1d1e1f);
   width: 100%;
@@ -249,20 +301,27 @@
 }
 
 .conversa {
-  height: calc(100% - 4.5em);
-  background-color: #15181956;
+  height: calc(100% - 4.5em - 57.33px);
+  background-color: #151819d6;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
 .barra {
   height: 4.5em;
   background-color: #151819;
   padding: 1em;
+  border-top: #4b484a solid 1px;
 }
 
 /* --itens da barra de msg-- */
 .barra > .form-control:focus {
-  box-shadow: 0 0 0 0.2rem #2af8d977;
+  box-shadow: 0 0 0 0.1rem #2af8d977;
+}
+
+.no-msg:focus {
+  transition: 0.2s cubic-bezier(0.34, 0.01, 1, 0.36);
+  box-shadow: 0 0 0 0.1rem #f82a2a9d !important;
 }
 
 /* -botoes- */
@@ -274,7 +333,7 @@
   border: 1px solid #2af8d8;
 }
 .barra > .btn-primary:hover {
-  transition: 0.3s cubic-bezier(0.34, 0.01, 1, 0.36);
+  transition: 0.2s cubic-bezier(0.34, 0.01, 1, 0.36);
   background-color: #2af8d8;
 }
 
@@ -284,7 +343,7 @@
 }
 
 .btnonhover {
-  transition: 0.3s cubic-bezier(0.34, 0.01, 1, 0.36);
+  transition: 0.2s cubic-bezier(0.34, 0.01, 1, 0.36);
   color: #151819;
 }
 

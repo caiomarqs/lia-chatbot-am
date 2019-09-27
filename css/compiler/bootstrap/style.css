@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  background-color: #07cfb0;
+}
+
 /* --barra de scroll-- */
 ::-webkit-scrollbar-track {
   background-color: #d3d3d3;
@@ -54,7 +62,14 @@
 
 /* -animacao menu- */
 #navbar {
+  user-select: none;
   transition: 0.7s cubic-bezier(0.04, 0.67, 0.25, 1);
+}
+
+/*scroll spy ativação*/
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+  transition: 0.3s;
+  color: #2af8d8 !important;
 }
 
 /* -menu ativo- */
@@ -159,8 +174,12 @@
   border-color: #2af8d8;
 }
 
+body {
+  position: relative;
+}
+
 /* --sobre---apresentacao- */
-#parte1 {
+#sobre {
   width: 100%;
   background-image: url("../../../images/bg1.png"), linear-gradient(180deg, #151819, #1d1e1f);
 }
@@ -204,7 +223,7 @@
 /* -posicionamento da animação*/
 #fundo-apresentacao {
   width: 100%;
-  height: 200px;
+  height: 25em;
   z-index: 900;
   top: 20%;
   transform: translateY(-20%);
@@ -227,13 +246,85 @@
 }
 
 /*--como funciona-- */
-#parte2 {
+#como {
   background-image: url("../../../images/bg2.png"), linear-gradient(180deg, #1d1e1f, #212324);
 }
 
 /* --quem pode usar-- */
-#parte3 {
+#quem {
   background-image: url("../../../images/bg3.png"), linear-gradient(180deg, #212324, #151819);
+}
+
+/* -----------contato--------- */
+#contato {
+  background-image: url("../../../images/bg1.png"), linear-gradient(180deg, #151819, #212324);
+  padding: 10em 8em;
+}
+@media (max-width: 991.98px) {
+  #contato {
+    padding: 0 10% 10% 10%;
+    height: 100% !important;
+  }
+}
+@media (max-height: 800px) {
+  #contato {
+    height: 100% !important;
+  }
+}
+
+/* -caixa de contato- */
+#contato > .row {
+  background-color: #171a1ac4;
+  padding: 3em 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #8c8d8e26;
+  border-radius: 0.3em;
+  color: #eeeeee;
+  height: auto;
+}
+
+#contato > .row textarea {
+  resize: none;
+  color: #8c8d8e;
+  background-color: #2f34365b;
+  border: 0px solid #07cfb0;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  height: 20em;
+}
+@media (max-height: 800px) {
+  #contato > .row textarea {
+    height: 8em;
+  }
+}
+#contato > .row textarea:focus {
+  outline: none;
+}
+
+.color-textarea {
+  color: #eeeeee !important;
+}
+
+/* -inputs do contato-*/
+#contato > .row #nome, #assunto, #email, textarea {
+  margin: 0 0 2em 0;
+}
+
+#contato > .row #nome, #assunto, #email {
+  color: #eeeeee;
+}
+
+/* -btn enviar-*/
+#btn-enviar {
+  float: right;
+  width: 12em;
+  margin: 0 0 0 auto;
+}
+@media (max-width: 767.98px) {
+  #btn-enviar {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

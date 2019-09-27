@@ -302,17 +302,9 @@ body {
   outline: none;
 }
 
-.color-textarea {
-  color: #eeeeee !important;
-}
-
 /* -inputs do contato-*/
 #contato > .row #nome, #assunto, #email, textarea {
   margin: 0 0 2em 0;
-}
-
-#contato > .row #nome, #assunto, #email {
-  color: #eeeeee;
 }
 
 /* -btn enviar-*/

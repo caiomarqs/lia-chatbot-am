@@ -1,8 +1,8 @@
 let nomeInput = document.getElementById('nome');
-let nomeRegex = /^[a-zA-z]{1,20}/;
+let nomeRegex = /^[a-zA-z]{1,60}/;
 
 let sobrenomeInput = document.getElementById('sobrenome');
-let sobrenomeRegex = /^[a-zA-z]{1,20}/;
+let sobrenomeRegex = /^[a-zA-z]{1,120}/;
 
 let emailInputForm = document.getElementById('email');
 

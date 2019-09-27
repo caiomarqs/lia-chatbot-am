@@ -354,6 +354,9 @@ body {
   box-shadow: 0 0 0 0.1rem #2af8d977;
 }
 
+.no-msg {
+  box-shadow: 0 0 0 0.1rem #f82a2a9d !important;
+}
 .no-msg:focus {
   transition: 0.2s cubic-bezier(0.34, 0.01, 1, 0.36);
   box-shadow: 0 0 0 0.1rem #f82a2a9d !important;
